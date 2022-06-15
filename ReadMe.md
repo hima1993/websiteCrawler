@@ -2,7 +2,7 @@
 
 - Navigate Go to the "https://github.com/hima1993/websiteCrawler/tree/main/web-content-crawler/target" location.
 
-- Then You will find the jara file called "web-content-crawler-1.0-SNAPSHOT-jar-with-dependencies.jar".
+- Then You will find the jar file called "web-content-crawler-1.0-SNAPSHOT-jar-with-dependencies.jar".
 
 - Then Run the following command "java -jar web-content-crawler-1.0-SNAPSHOT-jar-with-dependencies.jar"
 
