@@ -9,7 +9,9 @@
 ## Output of the program
 
 - When running the program download progress will be showing on the console as illustrates below,
-  ![Showing Progress of Downloading](image.jpg)
+
+  ![Showing Progress of Downloading](progress_of_downloading.png)
+  
 - When downloading the content those content will be download under the folder called "download_content".
 
 
