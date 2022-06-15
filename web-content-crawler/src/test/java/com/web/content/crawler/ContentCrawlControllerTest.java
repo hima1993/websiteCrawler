@@ -102,30 +102,5 @@ public class ContentCrawlControllerTest
         //then
         assertEquals(output.isEmpty(),true);
     }
-    /*
-    @Test
-    public void getContentFromInCorrectFilePath()
-    {     
-        //given
-        ContentCrawler cw = new ContentCrawler();
-        String localPath = System.getProperty("user.dir")+"/download_content/index.html";
-
-        File file = new File(localPath);
-        if(!file.exists())
-        {
-            file.mkdirs();
-        
-        }
-
-        ContentCrawlController contentCrawlController = new ContentCrawlController();
-        
-        //when
-        boolean output = contentCrawlController.crawlMainPage(localPath, localPath, cw);
-        
-        //then
-        assertEquals(output,true);
-    }
-  */
-   
 
 }
