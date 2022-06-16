@@ -42,35 +42,22 @@ public class ProgressDisplay extends Thread
         show();
     }
 
-    /**
-     * @param totalAmountToDownload the totalAmountToDownload to set
-     */
     public void setTotalAmountToDownload(float totalAmountToDownload) 
     {
         this.totalAmountToDownload = totalAmountToDownload;
     }
 
 
-    /**
-     * @param currentAmountToDownload the currentAmountToDownload to set
-     */
     public void setCurrentAmountToDownload(float currentAmountToDownload) 
     {
         this.currentAmountToDownload = currentAmountToDownload;
     }
     
-    /**
-     * @param currentAmountToDownload the currentAmountToDownload to set
-     */
     public float getCurrentAmountToDownload() 
     {
         return this.currentAmountToDownload;
     }
 
-
-    /**
-     * @return the currentAmountToDownload
-     */
     public float getTotalAmountToDownload() 
     {
         return totalAmountToDownload;

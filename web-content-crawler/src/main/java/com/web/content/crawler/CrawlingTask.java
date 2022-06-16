@@ -20,12 +20,11 @@ public class CrawlingTask implements Runnable
 {
     InputStream inputStream;
     String localPath;
-    //private ProgressDisplay progressDisplay;
+    
     public CrawlingTask(InputStream inputStream, String localPath)
     {
         this.inputStream = inputStream;
         this.localPath = localPath;
-        //this.progressDisplay = progressDisplay;
     }
     
     @Override
@@ -34,7 +33,6 @@ public class CrawlingTask implements Runnable
         try(FileOutputStream fileOutputStream  = new FileOutputStream(this.localPath);
             BufferedInputStream bufferedInputStream = new BufferedInputStream(this.inputStream))
         {
-            //System.out.println(Thread.currentThread().getName()+" (Start) ");  
             int count = 0;
             byte[] b = new byte[8192];
             
@@ -45,7 +43,7 @@ public class CrawlingTask implements Runnable
 
             bufferedInputStream.close();
             fileOutputStream.close();
-            //System.out.println(Thread.currentThread().getName()+" (End)");
+
             ProgressDisplay.getInstance().setCurrentAmountToDownload(ProgressDisplay.getInstance().getCurrentAmountToDownload()+1);
 
         }
