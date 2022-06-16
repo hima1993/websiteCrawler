@@ -5,20 +5,8 @@
  */
 package com.web.content.crawler;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import org.junit.Test;
 
@@ -27,70 +15,8 @@ import static org.junit.Assert.*;
  *
  * @author himaruksilva
  */
-public class ContentCrawlerTest {
-
-   /*
-    @Test
-    public void saveContentCorrectRemoteFileNameandCorrectLocalFileName()
-    {
-        //given
-        ContentCrawler cw = new ContentCrawler();
-        String correctRemotePath = "https://tretton37.com/assets/css/main.css";
-        String correctLocalPath = System.getProperty("user.dir")+"/download_content/main.css";
-
-        
-        //when
-        boolean output = cw.isRemoteFileNameSavable(correctRemotePath, correctLocalPath);
-        
-        
-        //then
-        assertEquals(output,true);
-    }
-    */
-    
-    /*
-    @Test
-    public void saveContentCorrectRemoteFileNameandInCorrectLocalFileName()
-    {
-        //given
-        ContentCrawler cw = new ContentCrawler();
-        String correctRemotePath = "https://tretton37.com/assets/css/main.css";
-        String IncorrectLocalPath = System.getProperty("user.dir")+"/download_content/main-incorrect.css";
-
-        
-        //when
-        boolean output = cw.isRemoteFileNameSavable(correctRemotePath, IncorrectLocalPath);
-        
-        
-        //then
-        assertEquals(output,false);
-    }
-    */
-    
-    
-    @Test
-    public void saveContentInLocalPath()
-    {
-        String cssString = "body {background-color: powderblue;}\nh1   {color: blue;}\np{color: red;}";
-        InputStream targetStream = new ByteArrayInputStream(cssString.getBytes());
-        //given
-        ContentCrawler cw = new ContentCrawler();
-        String localPath = System.getProperty("user.dir")+"/download_content";
-        File file = new File(localPath);
-        if(!file.exists())
-        {
-            file.mkdir();
-        
-        }
-        
-        //when
-        boolean output = cw.saveContent(targetStream, localPath+"/main.css");
-        
-        
-        //then
-        assertEquals(output,true);
-    }
-    
+public class ContentCrawlerTest 
+{
     @Test
     public void extractWebLinksFromEmptyFileContent()
     {
@@ -107,7 +33,7 @@ public class ContentCrawlerTest {
         assertEquals(output.isEmpty(),true);
     }
     
-    
+   
     @Test
     public void extractWebLinksFromCorrectFileContent()
     {
@@ -146,6 +72,7 @@ public class ContentCrawlerTest {
         //then
         assertEquals(output.isEmpty(),true);
     }
+    
     
     @Test
     public void compileValidRegex()

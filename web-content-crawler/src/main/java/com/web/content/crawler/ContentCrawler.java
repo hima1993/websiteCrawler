@@ -10,7 +10,6 @@ import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -25,33 +24,7 @@ import java.util.regex.PatternSyntaxException;
  * @author himaruksilva
  */
 public class ContentCrawler 
-{   
-    public boolean saveContent(InputStream inputStream, String localPath) 
-    {   
-
-        try(FileOutputStream fileOutputStream  = new FileOutputStream(localPath);
-            BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream))
-        {
-            int count = 0;
-            byte[] b = new byte[8192];
-
-            while ((count = bufferedInputStream.read(b)) != -1) 
-            {
-                fileOutputStream.write(b, 0, count);
-            }  
-
-            bufferedInputStream.close();
-            fileOutputStream.close();
-            return true;
-
-        }
-        catch (IOException ex) 
-        {
-            Logger.getLogger(ContentCrawler.class.getName()).log(Level.SEVERE, null, ex);
-            return false;
-        }    
-    }
-    
+{
     public Optional<Pattern> isValidRegex(String regexPattern)
     {
         try 
@@ -73,8 +46,7 @@ public class ContentCrawler
         if(!fileContent.isEmpty())
         {
             StringBuilder contentBuilder = new StringBuilder();
-            try(Reader inputString = new StringReader(fileContent);   
-                BufferedReader in = new BufferedReader(inputString))
+            try(BufferedReader in = new BufferedReader(new StringReader(fileContent)))
             {  
                 String str;
 
@@ -95,19 +67,9 @@ public class ContentCrawler
                     Matcher regexMatcher =regex.get().matcher(content);        
                     while (regexMatcher.find()) 
                     {
-
                          String link = regexMatcher.group(1);
-                         matches.add(link);
-                         
+                         matches.add(link);    
                     }
-                    /*
-                    matches = (ArrayList<String>) regex.get()
-                                  .matcher(content)
-                                  .results()
-                                  .map(MatchResult::group)
-                                  .collect(Collectors.toList());
-                    */
-                    ProgressDisplay.getInstance().setTotalAmountToDownload(matches.size());  
                 }
                 else
                 {
@@ -119,12 +81,7 @@ public class ContentCrawler
             {
                 Logger.getLogger(ContentCrawler.class.getName()).log(Level.SEVERE, null, ex);
             }
-            return matches;
         }
-        else
-        {
-            return matches;
-        }
-        
+        return matches;
     }  
 }

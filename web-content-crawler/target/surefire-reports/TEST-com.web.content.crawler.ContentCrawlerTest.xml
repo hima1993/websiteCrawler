@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.web.content.crawler.ContentCrawlerTest" time="0.022" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="com.web.content.crawler.ContentCrawlerTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.12+8-LTS-237"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home/lib"/>
     <property name="gopherProxySet" value="false"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/himaruksilva/NetBeansProjects/web-content-crawler"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/himaruksilva/NetBeansProjects/websiteCrawler_New/websiteCrawler/web-content-crawler"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/himaruksilva/NetBeansProjects/web-content-crawler"/>
+    <property name="user.dir" value="/Users/himaruksilva/NetBeansProjects/websiteCrawler_New/websiteCrawler/web-content-crawler"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.12+8-LTS-237"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
@@ -65,10 +65,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="extractWebLinksFromInValidRegex" time="0.004"/>
+  <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="extractWebLinksFromInValidRegex" time="0.002"/>
   <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="compileInValidRegex" time="0"/>
-  <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="saveContentInLocalPath" time="0.016"/>
-  <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="extractWebLinksFromCorrectFileContent" time="0.002"/>
+  <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="extractWebLinksFromCorrectFileContent" time="0.001"/>
   <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="compileValidRegex" time="0"/>
   <testcase classname="com.web.content.crawler.ContentCrawlerTest" name="extractWebLinksFromEmptyFileContent" time="0"/>
 </testsuite>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.web.content.crawler.ContentCrawlControllerTest" time="0.066" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.web.content.crawler.ContentCrawlControllerTest" time="0.028" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.12+8-LTS-237"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home/lib"/>
     <property name="gopherProxySet" value="false"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/himaruksilva/NetBeansProjects/web-content-crawler"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/himaruksilva/NetBeansProjects/websiteCrawler_New/websiteCrawler/web-content-crawler"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/himaruksilva/NetBeansProjects/web-content-crawler"/>
+    <property name="user.dir" value="/Users/himaruksilva/NetBeansProjects/websiteCrawler_New/websiteCrawler/web-content-crawler"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.12+8-LTS-237"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
@@ -65,8 +65,6 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.web.content.crawler.ContentCrawlControllerTest" name="getContentFromCorrectFilePath" time="0"/>
-  <testcase classname="com.web.content.crawler.ContentCrawlControllerTest" name="getContentFromInCorrectFilePath" time="0.066"/>
-  <testcase classname="com.web.content.crawler.ContentCrawlControllerTest" name="saveContentInCorrectRemoteFileName" time="0"/>
-  <testcase classname="com.web.content.crawler.ContentCrawlControllerTest" name="saveContentCorrectRemoteFileName" time="0"/>
+  <testcase classname="com.web.content.crawler.ContentCrawlControllerTest" name="saveContentInCorrectRemoteFileName" time="0.027"/>
+  <testcase classname="com.web.content.crawler.ContentCrawlControllerTest" name="saveContentCorrectRemoteFileName" time="0.001"/>
 </testsuite>
